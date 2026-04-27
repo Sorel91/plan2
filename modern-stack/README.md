@@ -43,5 +43,12 @@ uv run uvicorn g2p_modern.api.main:app --reload --app-dir src
 1. Migrer les schémas de données `.mat/.pkl` vers un format canonique (`parquet + metadata.json`).
 2. Extraire la logique de retrieval dans `core/retrieval.py` avec tests unitaires.
 3. Encapsuler le post-traitement Matlab derrière une interface, puis ajouter un fallback Python.
-4. Exposer un endpoint `/v1/generate` compatible avec le frontend.
+4. Exposer des endpoints `/v1/retrieve` et `/v1/generate` compatibles frontend.
 5. Ajouter CI (lint, typecheck, tests, build image).
+
+
+## API disponible
+
+- `GET /health`
+- `POST /v1/retrieve` (retrieval simple basé sur signature de boundary)
+- `POST /v1/generate` (stub de génération, migration progressive)

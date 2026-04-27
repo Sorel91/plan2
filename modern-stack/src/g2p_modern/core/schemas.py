@@ -20,6 +20,21 @@ class RoomConstraint(BaseModel):
     max_count: int | None = None
 
 
+class PlanCandidate(BaseModel):
+    name: str
+    score: float
+
+
+class RetrieveRequest(BaseModel):
+    boundary: Boundary
+    k: int = Field(default=5, ge=1, le=100)
+
+
+class RetrieveResponse(BaseModel):
+    candidates: list[PlanCandidate]
+    meta: dict[str, Any]
+
+
 class GenerateRequest(BaseModel):
     boundary: Boundary
     constraints: list[RoomConstraint] = Field(default_factory=list)
