@@ -20,6 +20,34 @@ cp -R modern-stack /chemin/vers/mon/projet/
 cd /chemin/vers/mon/projet/modern-stack
 ```
 
+## 0bis) Si `uv` n'est pas reconnu
+
+Si ton terminal affiche "commande introuvable: uv", tu as 2 options.
+
+### Option 1: installer `uv`
+
+```bash
+python -m pip install --user uv
+# puis redémarrer le terminal
+uv --version
+```
+
+### Option 2: continuer sans `uv` (venv + pip)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -e '.[dev]'
+```
+
+Dans ce cas, remplace les commandes `uv run ...` par des commandes Python directes:
+
+```bash
+PYTHONPATH=src pytest -q
+PYTHONPATH=src uvicorn g2p_modern.api.main:app --app-dir src --host 0.0.0.0 --port 8080
+```
+
 ## 1) Pré-requis
 
 - Python 3.12+

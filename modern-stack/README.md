@@ -58,3 +58,6 @@ Voir aussi `TESTING.md` pour un guide pas-à-pas de validation locale.
 
 
 Pour copier localement cette stack, voir la section **0) Copier `modern-stack` en local** dans `TESTING.md`.
+
+
+Si `uv` n'est pas disponible sur ta machine, utilise le fallback `venv + pip` décrit dans `TESTING.md`.
