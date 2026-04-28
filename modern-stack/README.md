@@ -55,3 +55,6 @@ uv run uvicorn g2p_modern.api.main:app --reload --app-dir src
 
 
 Voir aussi `TESTING.md` pour un guide pas-à-pas de validation locale.
+
+
+Pour copier localement cette stack, voir la section **0) Copier `modern-stack` en local** dans `TESTING.md`.

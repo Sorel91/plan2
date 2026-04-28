@@ -1,5 +1,25 @@
 # Tester `modern-stack` rapidement
 
+## 0) Copier `modern-stack` en local
+
+### Option A (recommandée) : cloner le repo puis utiliser la branche moderne
+
+```bash
+git clone <URL_DU_REPO> graph2plan
+cd graph2plan
+git checkout modern-stack-blueprint
+cd modern-stack
+```
+
+### Option B : copier seulement le dossier `modern-stack`
+
+Depuis le repo existant:
+
+```bash
+cp -R modern-stack /chemin/vers/mon/projet/
+cd /chemin/vers/mon/projet/modern-stack
+```
+
 ## 1) Pré-requis
 
 - Python 3.12+
