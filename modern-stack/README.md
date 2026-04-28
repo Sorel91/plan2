@@ -52,3 +52,6 @@ uv run uvicorn g2p_modern.api.main:app --reload --app-dir src
 - `GET /health`
 - `POST /v1/retrieve` (retrieval simple basé sur signature de boundary)
 - `POST /v1/generate` (stub de génération, migration progressive)
+
+
+Voir aussi `TESTING.md` pour un guide pas-à-pas de validation locale.
